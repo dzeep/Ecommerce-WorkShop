@@ -17,7 +17,7 @@ public class ProductControllers {
         this.productService = productService;
     }
 
-    @PostMapping("/update")
+    @PostMapping("/save")
     public ResponseEntity<Product> createProduct(@RequestBody Product product) {
         if (product.getPrice() <= 0) {
             return ResponseEntity.badRequest().build();
